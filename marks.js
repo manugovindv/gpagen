@@ -72,7 +72,7 @@ var data = {
 function maketable(ptab, pbranch, psem) {
 
     count = 0;
-    
+
 
     for (i of data[pbranch][psem]) {
         count++;
@@ -200,67 +200,67 @@ function myFunction() {
 function getOption() {
     ciesum = 0;
     seesum = 0;
-    cpsum=0;
+    cpsum = 0;
     tab = document.querySelector('#ctable');
 
-    for (i = 1; i < (tab.childNodes.length-1 ); i++) {
+    for (i = 1; i < (tab.childNodes.length - 1); i++) {
         ciesum += parseFloat(tab.childNodes[i].childNodes[4].firstChild.value);
-        if (!data[branch][sem][i-1].see){
+        if (!data[branch][sem][i - 1].see) {
             tab.childNodes[i].childNodes[5].innerHTML = parseFloat(tab.childNodes[i].childNodes[4].firstChild.value);
-            tab.childNodes[i].childNodes[6].innerHTML = 2*parseFloat(tab.childNodes[i].childNodes[4].firstChild.value);
-            seesum += parseFloat(tab.childNodes[i].childNodes[4].firstChild.value); 
+            tab.childNodes[i].childNodes[6].innerHTML = 2 * parseFloat(tab.childNodes[i].childNodes[4].firstChild.value);
+            seesum += parseFloat(tab.childNodes[i].childNodes[4].firstChild.value);
 
-        }else{
-        tab.childNodes[i].childNodes[6].innerHTML = parseFloat(tab.childNodes[i].childNodes[5].firstChild.value) + parseFloat(tab.childNodes[i].childNodes[4].firstChild.value);
-        seesum += parseFloat(tab.childNodes[i].childNodes[5].firstChild.value); 
-    }
+        } else {
+            tab.childNodes[i].childNodes[6].innerHTML = parseFloat(tab.childNodes[i].childNodes[5].firstChild.value) + parseFloat(tab.childNodes[i].childNodes[4].firstChild.value);
+            seesum += parseFloat(tab.childNodes[i].childNodes[5].firstChild.value);
+        }
         //writing grade
-        if(tab.childNodes[i].childNodes[6].innerHTML>=90){
-          tab.childNodes[i].childNodes[7].innerHTML="S";
-          tab.childNodes[i].childNodes[8].innerHTML=parseInt(10)
-          tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML)*10;
+        if (tab.childNodes[i].childNodes[6].innerHTML >= 90) {
+            tab.childNodes[i].childNodes[7].innerHTML = "S";
+            tab.childNodes[i].childNodes[8].innerHTML = parseInt(10)
+            tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML) * 10;
         }
-        else if(tab.childNodes[i].childNodes[6].innerHTML>=75){
-          tab.childNodes[i].childNodes[7].innerHTML="A";
-          tab.childNodes[i].childNodes[8].innerHTML=parseInt(9);
-          tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML)*9;
+        else if (tab.childNodes[i].childNodes[6].innerHTML >= 75) {
+            tab.childNodes[i].childNodes[7].innerHTML = "A";
+            tab.childNodes[i].childNodes[8].innerHTML = parseInt(9);
+            tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML) * 9;
 
         }
-        else if(tab.childNodes[i].childNodes[6].innerHTML>=60){
-          tab.childNodes[i].childNodes[7].innerHTML="B";
-          tab.childNodes[i].childNodes[8].innerHTML=parseInt(8)
-          tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML)*8;
+        else if (tab.childNodes[i].childNodes[6].innerHTML >= 60) {
+            tab.childNodes[i].childNodes[7].innerHTML = "B";
+            tab.childNodes[i].childNodes[8].innerHTML = parseInt(8)
+            tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML) * 8;
 
         }
-        else if(tab.childNodes[i].childNodes[6].innerHTML>=50){
-          tab.childNodes[i].childNodes[7].innerHTML="C";
-          tab.childNodes[i].childNodes[8].innerHTML=parseInt(7)
-          tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML)*7;
+        else if (tab.childNodes[i].childNodes[6].innerHTML >= 50) {
+            tab.childNodes[i].childNodes[7].innerHTML = "C";
+            tab.childNodes[i].childNodes[8].innerHTML = parseInt(7)
+            tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML) * 7;
         }
-        else if(tab.childNodes[i].childNodes[6].innerHTML>=45){
-          tab.childNodes[i].childNodes[7].innerHTML="D";
-          tab.childNodes[i].childNodes[8].innerHTML=parseInt(6)
-          tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML)*6;
+        else if (tab.childNodes[i].childNodes[6].innerHTML >= 45) {
+            tab.childNodes[i].childNodes[7].innerHTML = "D";
+            tab.childNodes[i].childNodes[8].innerHTML = parseInt(6)
+            tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML) * 6;
         }
-        else if(tab.childNodes[i].childNodes[6].innerHTML>=40){
-          tab.childNodes[i].childNodes[7].innerHTML="E";
-          tab.childNodes[i].childNodes[8].innerHTML=parseInt(5)
-          tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML)*5;
+        else if (tab.childNodes[i].childNodes[6].innerHTML >= 40) {
+            tab.childNodes[i].childNodes[7].innerHTML = "E";
+            tab.childNodes[i].childNodes[8].innerHTML = parseInt(5)
+            tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML) * 5;
         }
-        else if(tab.childNodes[i].childNodes[6].innerHTML>0){
-          tab.childNodes[i].childNodes[7].innerHTML="F";
-          tab.childNodes[i].childNodes[8].innerHTML=parseInt(0)
-          tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML)*0;
+        else if (tab.childNodes[i].childNodes[6].innerHTML > 0) {
+            tab.childNodes[i].childNodes[7].innerHTML = "F";
+            tab.childNodes[i].childNodes[8].innerHTML = parseInt(0)
+            tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML) * 0;
         }
-      cpsum+=parseFloat(tab.childNodes[i].childNodes[9].innerHTML)
-  
-}
+        cpsum += parseFloat(tab.childNodes[i].childNodes[9].innerHTML)
 
-tab.lastChild.childNodes[4].innerHTML = ciesum;
-tab.lastChild.childNodes[5].innerHTML = seesum;
-tab.lastChild.childNodes[6].innerHTML = seesum+ciesum;
-tab.lastChild.childNodes[9].innerHTML = cpsum;
-document.getElementById("per").innerHTML = parseFloat(((seesum+ciesum)/((tab.childNodes.length-2)*100))*100).toFixed(3)
+    }
+
+    tab.lastChild.childNodes[4].innerHTML = ciesum;
+    tab.lastChild.childNodes[5].innerHTML = seesum;
+    tab.lastChild.childNodes[6].innerHTML = seesum + ciesum;
+    tab.lastChild.childNodes[9].innerHTML = cpsum;
+    document.getElementById("per").innerHTML = parseFloat(((seesum + ciesum) / ((tab.childNodes.length - 2) * 100)) * 100).toFixed(3)
 
 
 
