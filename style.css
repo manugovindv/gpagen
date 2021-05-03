@@ -1,0 +1,254 @@
+html {
+    scroll-behavior: smooth; /*sets the scroll behavior to smooth-->*/
+  }
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    vertical-align: middle;
+    /*defines border,text allignment,font family and vertically aligns the content to middle of the table*/
+  }
+  .wrapper{
+    overflow: auto;
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    /*class to center table and table content*/
+  }
+  hr.new {
+    border: 1px solid #4caf50; /*sets the hr to the mentioned colour*/
+  }
+  body {
+    margin: 0;
+    height: 100%;
+    position: relative;
+  }
+  input {
+    background-color: rgb(245, 245, 245);
+    border-radius: 2px;
+    /*provides the background colour and broder to the input button*/
+  }
+  .main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+  }
+  .button {
+    border-radius: 4px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    padding: 12px 32px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-bottom: 6rem;
+    /*set properties for button*/
+  }
+  
+  .success {
+    border-color: #4caf50;
+    color: green;
+    /*function to provide hover functionality to the button*/
+  }
+  
+  .success:hover {
+    background-color: #4caf50;
+    color: white;
+    /*function to do when hovered over the button*/
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  /*animating the hover function*/
+  .animate {
+    position: relative;
+    animation: animatetop 0.5s ease;
+  }
+  @keyframes animatetop {
+    from {
+      bottom: -50px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0px;
+      opacity: 1;
+    }
+  } /*button + animation*/
+  
+  .header {
+    overflow: hidden;
+    background-color: #4caf50;
+    padding: 20px 20px;
+    color: ivory;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .button1 {
+    border-radius: 4px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #4caf50;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 12px 24px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    /*set properties for button in header*/
+  }
+  .customSelect {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 0px;
+    color: green;
+    width: 200px;
+    height: 25px;
+  }
+  .state{
+      display:none;
+  }
+  .calc{
+      margin-top:2rem;
+      width:100%;
+  }
+.entable{
+    width:95%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*----------------------------------------footer-styles---------------------------------------*/
+  #footer {
+    background-color: #4caf50;
+    margin: 0;
+    min-height: 50px;
+    padding: 0;
+    width: 100%;
+    bottom: 0;
+    /* position: absolute; */
+  }
+  #footer div {
+    margin: 0 auto;
+    max-width: 940px;
+    overflow: auto;
+    padding: 16px 10px 16px;
+  }
+  #footer div p {
+    color: #ffffff;
+    float: left;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 15px;
+    margin: 0;
+    padding: 5px 0 0;
+    text-align: left;
+    text-transform: none;
+    width: 400px;
+    margin-bottom: 1rem;
+  }
+  #footer div .connect {
+    display: block;
+    float: right;
+    height: 32px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 154px;
+  }
+  #footer div .connect a {
+    background: url(../images/icons.png) no-repeat;
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0 4px;
+    padding: 0;
+    text-indent: -99999px;
+    width: 28px;
+  }
+  /* #footer div .connect a.facebook {
+    background-position: 0 0;
+  } */
+  #footer div .connect a.github {
+    background-position: 0 0;
+  }
+  #footer div .connect a.instagram {
+    background-position: 0 -30px;
+  }
+  #footer div .connect a.linkedin {
+    background-position: 0 -60px;
+  }
+  #footer div .connect a.twitter {
+    background-position: 0 -90px;
+  }
+  /* #footer div .connect a.facebook:hover {
+    background-position: -30px 0;
+  } */
+  #footer div .connect a.github:hover {
+    background-position: -30px 0;
+  }
+  #footer div .connect a.instagram:hover {
+    background-position: -30px -30px;
+  }
+  #footer div .connect a.linkedin:hover {
+    background-position: -30px -60px;
+  }
+  #footer div .connect a.twitter:hover {
+    background-position: -30px -90px;
+  }
