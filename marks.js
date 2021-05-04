@@ -205,6 +205,7 @@ function getOption() {
     ciesum = 0;
     seesum = 0;
     cpsum = 0;
+    credsum = 0;
     tab = document.querySelector('#ctable');
 
     for (i = 1; i < (tab.childNodes.length - 1); i++) {
@@ -257,7 +258,13 @@ function getOption() {
             tab.childNodes[i].childNodes[9].innerHTML = parseFloat(tab.childNodes[i].childNodes[3].innerHTML) * 0;
         }
         cpsum += parseFloat(tab.childNodes[i].childNodes[9].innerHTML)
+        credsum+=parseFloat(tab.childNodes[i].childNodes[3].innerHTML)
 
+        if(isNaN(tab.childNodes[i].childNodes[6].innerHTML)){
+            alert("Please enter proper values");
+            tab.childNodes[i].childNodes[6].innerHTML = ""
+            return;
+          }
     }
 
     tab.lastChild.childNodes[4].innerHTML = ciesum;
@@ -265,7 +272,7 @@ function getOption() {
     tab.lastChild.childNodes[6].innerHTML = seesum + ciesum;
     tab.lastChild.childNodes[9].innerHTML = cpsum;
     document.getElementById("per").innerHTML = parseFloat(((seesum + ciesum) / ((tab.childNodes.length - 2) * 100)) * 100).toFixed(3)
-
+    document.getElementById("sgpa").innerHTML=(cpsum/credsum).toFixed(3);
 
 
 
