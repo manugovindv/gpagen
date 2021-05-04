@@ -103,6 +103,8 @@ function maketable(ptab, pbranch, psem) {
         col5in = document.createElement("input");
         col5in.type = "number";
         col5in.name = "cie" + count;
+        col5in.min="20";
+        col5in.max="50";
         col5.appendChild(col5in);
         rowNode.appendChild(col5);
 
@@ -112,6 +114,8 @@ function maketable(ptab, pbranch, psem) {
             col6in = document.createElement("input");
             col6in.type = "number";
             col6in.name = "see" + count;
+            col6in.min="20";
+            col6in.max="50";
             col6.appendChild(col6in);
         }
         rowNode.appendChild(col6);
