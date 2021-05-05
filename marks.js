@@ -148,7 +148,10 @@ function myFunction() {
 
     /*-------------Head section of the table -------------*/
     if (togele.innerHTML != "") {
-        togele.innerHTML = ""
+        togele.innerHTML = "";
+        document.getElementById("per").innerHTML = "";
+        document.getElementById("sgpa").innerHTML="";
+
     }
 
 
